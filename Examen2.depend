@@ -194,7 +194,7 @@
 1443116337 source:/home/segebre/Desktop/Examen2Armadillo-master/Gato.cpp
 	"Gato.h"
 
-1443116484 source:/home/segebre/Desktop/Examen2Armadillo-master/main.cpp
+1443119907 source:/home/segebre/Desktop/Examen2Armadillo-master/main.cpp
 	<iostream>
 	<list>
 	<fstream>
@@ -205,6 +205,7 @@
 	"Gato.h"
 	"Evaluador.h"
 	"NodoTrinario.h"
+	<algorithm>
 
 1443111377 source:/home/segebre/Desktop/Examen2Armadillo-master/NodoTrinario.cpp
 	"NodoTrinario.h"

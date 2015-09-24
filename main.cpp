@@ -110,7 +110,30 @@ bool existe(map<string,vector<string> >mi_mapa, string buscada)
 //Devuelve el valor mayor almacenado en el arbol con raiz dada
 int getMayor(NodoTrinario* raiz)
 {
-    return -1;
+    int num=0;
+    if(raiz != NULL)
+       num=raiz->valor;
+
+    if(raiz->derecho != NULL){
+       int temporal_der = getMayor(raiz->derecho);
+       if(num<temporal_der)
+           num=temporal_der;
+    }
+
+    if(raiz->medio != NULL){
+       int temporal_medio = getMayor(raiz->medio);
+       if(num<temporal_medio)
+           num=temporal_medio;
+    }
+
+    if(raiz->izquierdo != NULL){
+    int temporal_izquierdo = getMayor(raiz->izquierdo);
+    if(num<temporal_izquierdo)
+        num=temporal_izquierdo;
+
+    }
+
+    return num;
 }
 
 //Busca y reemplaza dado los valores buscado y reemplazo en el arbol con raiz dada
