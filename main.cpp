@@ -139,6 +139,28 @@ int getMayor(NodoTrinario* raiz)
 //Busca y reemplaza dado los valores buscado y reemplazo en el arbol con raiz dada
 void buscarYReemplazar(NodoTrinario* raiz,int buscado, int reemplazo)
 {
+   if(raiz != NULL)
+       if(raiz->valor==buscado)
+           raiz->valor=reemplazo;
+
+   if(raiz->derecho != NULL){
+       buscarYReemplazar(raiz->derecho, buscado, reemplazo);
+       if(buscado==raiz->derecho->valor)
+           raiz->derecho->valor=reemplazo;
+   }
+
+   if(raiz->medio != NULL){
+       buscarYReemplazar(raiz->medio, buscado, reemplazo);
+       if(buscado==raiz->medio->valor)
+           raiz->medio->valor=reemplazo;
+   }
+
+   if(raiz->izquierdo != NULL){
+        buscarYReemplazar(raiz->izquierdo, buscado, reemplazo);
+       if(buscado==raiz->izquierdo->valor)
+           raiz->izquierdo->valor=reemplazo;
+
+   }
 }
 
 char retener3Bits(char byte)
